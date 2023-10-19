@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 
 using namespace std;
 
@@ -316,7 +316,7 @@ int** AddRowIndex(int** arr, int& row, int columns)
     cin >> Index;
     if (Index > row)
     {
-        cout << "Òàêîãî èíäåêñà íåòó" << endl;
+        cout << "Ð¢Ð°ÐºÐ¾Ð³Ð¾ Ð¸Ð½Ð´ÐµÐºÑÐ° Ð½ÐµÑ‚Ñƒ" << endl;
         return 0;
     }
     else
@@ -400,67 +400,67 @@ int main()
 
     int row;
     int columns;
-    cout << "Ââåäèòå êîëè÷åñòâî ñòðîê: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: ";
     cin >> row;
-    cout << "Ââåäèòå êîëè÷åñòâî ñòîëáöîâ: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²: ";
     cin >> columns;
     int** arr;
 
     cout << endl;
 
-    cout << "Íåèçåíåíûé ìàññèâ: " << endl;
+    cout << "ÐÐµÐ¸Ð·ÐµÐ½ÐµÐ½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð²: " << endl;
     arr = CreateArray(row, columns);
     FillArray(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Äîáàâèòü ñòîëáåö â íà÷àëî" << endl;
+    cout << "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾" << endl;
     arr = AddColumnsStart(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Äîáàâèòü ñòîëáåö â êîíåö" << endl;
+    cout << "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð² ÐºÐ¾Ð½ÐµÑ†" << endl;
     arr = AddColumnsEnd(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Óäàëèòü ñòîëáåö â íà÷àëå" << endl;
+    cout << "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð² Ð½Ð°Ñ‡Ð°Ð»Ðµ" << endl;
     arr = DeleteColumnsStart(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Óäàëèòü ñòîëáåö â êîíöå" << endl;
+    cout << "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»Ð±ÐµÑ† Ð² ÐºÐ¾Ð½Ñ†Ðµ" << endl;
     arr = DeleteColumnsEnd(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Äîáàâèòü ñòðîêó â íà÷àëî" << endl;
+    cout << "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð² Ð½Ð°Ñ‡Ð°Ð»Ð¾" << endl;
     arr = AddRowStart(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Äîáàâèòü ñòðîêó â êîíåö" << endl;
+    cout << "Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð² ÐºÐ¾Ð½ÐµÑ†" << endl;
     arr = AddRowEnd(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Óäàëèòü ñòðîêó â íà÷àëå" << endl;
+    cout << "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð² Ð½Ð°Ñ‡Ð°Ð»Ðµ" << endl;
     arr = DeleteRowStart(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
 
-    cout << "Óäàëèòü ñòðîêó â êîíöå" << endl;
+    cout << "Ð£Ð´Ð°Ð»Ð¸Ñ‚ÑŒ ÑÑ‚Ñ€Ð¾ÐºÑƒ Ð² ÐºÐ¾Ð½Ñ†Ðµ" << endl;
     arr = DeleteRowEnd(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Ââåäèòå èíäåêñ, ÷òî áû äîáàâèòü íîâóþ ñòðîêó: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ, Ñ‡Ñ‚Ð¾ Ð±Ñ‹ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¾Ð²ÑƒÑŽ ÑÑ‚Ñ€Ð¾ÐºÑƒ: ";
     arr = AddRowIndex(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
 
-    cout << "Ââåäèòå èíäåêñ, ÷òî áû äîáàâèòü íîâûé ñòîëáåö: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð½Ð´ÐµÐºÑ, Ñ‡Ñ‚Ð¾ Ð±Ñ‹ Ð´Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ Ð½Ð¾Ð²Ñ‹Ð¹ ÑÑ‚Ð¾Ð»Ð±ÐµÑ†: ";
     arr = AddColumnsIndex(arr, row, columns);
     ShowArray(arr, row, columns);
     cout << endl;
